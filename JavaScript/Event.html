@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Event</title>
+</head>
+
+<script type="text/javascript">
+
+function change(){
+	
+	var name = document.getElementById("name");
+    name.value = name.value.toUpperCase();
+}
+
+function color(a){
+	 a.style.background = "yellow";
+}
+
+function check(){
+	
+	var name = document.getElementById("pass").value;
+	document.getElementById("ans").innerHTML = "Your password is:- "+name;
+}
+
+</script>
+<body>
+
+Enter Name: <input type ="text" name="name" id ="name" onchange="change()"/>
+<br>
+<br>
+Enter Password: <input type="password" name ="pass" id ="pass" onchange="check()" onfocus="color(this)"/>
+<br>
+<div id=ans></div>
+
+</body>
+</html>

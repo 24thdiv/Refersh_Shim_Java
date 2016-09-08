@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Array</title>
+</head>
+
+<script type="text/javascript">
+
+var students = [];
+
+function addStudent(){
+	
+	var newStudent = document.getElementById("one").value;
+	students.push(newStudent);
+	document.getElementById("answer").innerHTML="New Student "+newStudent+" has been added to Class";
+}
+
+function allStudent(){
+	
+	
+	
+	var i,answer="<ul>";
+	var len = students.length;
+	console.log(len)
+	if(len>0){
+		for (i = 0; i < len; i++) {
+	    	answer += "<li>" + students[i] + "</li>";
+		}
+	
+		document.getElementById("answer").innerHTML=answer;
+	}
+	else{
+		document.getElementById("answer").innerHTML="No new Student is registed";
+			
+	}
+	
+}
+
+</script>
+
+<body>
+
+<table>
+		<tr>
+			<td>Enter Student Name :</td>
+			<td><input type="text" id="one"/></td>
+			
+		</tr>
+		<tr>
+		<td><input type="button" name="add" value="Add Student" id="submit"
+												onclick="addStudent()"></td>
+		</tr>
+		<tr>
+		<td><input type="button" name="show" value="Show All Students" id="allstudent"
+												onclick="allStudent()"></td>
+		</tr>
+	</table>
+	<hr>
+	<span id="answer"></span>
+
+
+</body>
+</html>

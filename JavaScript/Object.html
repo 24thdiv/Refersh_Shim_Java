@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Object</title>
+</head>
+
+<script type="text/javascript">
+
+function getDetails(){
+	
+	var name = document.getElementById("name");
+	var val = name.options[name.selectedIndex].value;
+	
+	var object;
+	
+	if(val == "Google"){
+		
+		object={cname:val, address: "125 1st. Mountaine View", contact: "gsupport@gmail.com"};
+		
+		document.getElementById("details").innerHTML = "Company Name: "+object.cname+" \nAddress: "+
+			object.address+" \ncontact: "+object.contact;
+	}
+	else if(val == "Apple"){
+		
+		object={cname:val, address: "101 S Palo Alto", contact: "applesupport@apple.com"};
+		
+		document.getElementById("details").innerHTML = "Company Name: "+object.cname+" \nAddress: "+
+			object.address+" \ncontact: "+object.contact;
+
+		
+	}
+
+	else if(val == "Microsoft"){
+		
+		object={cname:val, address: "342 2nd St. Mountaine View", contact: "microsoftsupport@hotmail.com"};
+		
+		document.getElementById("details").innerHTML = "Company Name: "+object.cname+" \nAddress: "+
+			object.address+" \ncontact: "+object.contact;
+
+		
+	}
+
+	else if(val == "Amazon"){
+		
+		object={cname:val, address: "111 W Palo Alto", contact: "amazonsupport@amazon.com"};
+		
+		document.getElementById("details").innerHTML = "Company Name: "+object.cname+" \nAddress: "+
+			object.address+" \ncontact: "+object.contact;
+
+		
+	}
+
+	
+	
+}
+
+
+</script>
+
+<body>
+
+	<p>Select Company Name for Details</p>
+		<select id="name">
+			<option value="Google">Google</option>
+			<option value="Apple">Apple</option>
+			<option value="Amazon">Amazon</option>
+			<option value="Microsoft">Microsoft</option>
+		</select>
+		<button onclick="getDetails()">Details of Company</button> <br/> <br/>
+		<div id="details"></div>
+	<br/>
+
+</body>
+</html>

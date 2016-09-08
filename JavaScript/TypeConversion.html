@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Type Conversion</title>
+</head>
+
+<script type="text/javascript">
+
+function check(){
+	
+	var num = document.getElementById("num").value;
+	var number = Number(num);
+	var n = number/3;
+	
+	document.getElementById("ans").innerHTML="Number is : " + number;
+	document.getElementById("ans1").innerHTML="Number divided by 3 : " + number/3;
+	document.getElementById("ans2").innerHTML="Number divided by 3 with two decimal : " + n.toFixed(2);
+	document.getElementById("ans3").innerHTML="Number divided by 3 with Integer: " + parseInt(n);
+
+}
+
+
+</script>
+
+<body>
+<h3>Type Conversion Example</h3>
+
+<br>
+Enter Number: <input type="text" id="num"/>
+<input type="button" value="Convert Type" onclick="check()"/>
+<br>
+<hr>
+<div id = "ans"></div>
+<div id = "ans1"></div>
+<div id = "ans2"></div>
+<div id = "ans3"></div>
+</body>
+</html>

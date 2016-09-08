@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<script>
+var note = document.getElementById("lat");
+
+function locationfinder() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(findposition, finderrors);
+    } else {
+        note.innerHTML = "Geolocation is not supported";
+    }
+}
+
+function findposition(pos) {
+    var lat = pos.coords.latitude + "," + pos.coords.longitude;
+
+    var img = "http://maps.googleapis.com/maps/api/staticmap?center="
+    +lat+"&zoom=13&size=400x300&sensor=false";
+    document.getElementById("map").innerHTML = "<img src='"+img+"'>";
+  //  note.innerHTML = "Latitude: "+pos.coords.latitude+"<br>Longitude: "+pos.coords.longitude;    
+
+}
+
+function finderrors(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            note.innerHTML = "User denied for Geolocation."
+            break;
+        case error.POSITION_UNAVAILABLE:
+            note.innerHTML = "Location information is not available."
+            break;
+        case error.TIMEOUT:
+            note.innerHTML = "Time Out."
+            break;
+        case error.UNKNOWN_ERROR:
+            note.innerHTML = "Unknown Error."
+            break;
+    }
+}
+</script>
+
+
+<body>
+<h3>Find My Location</h3>
+<button onclick="locationfinder()">My Location</button>
+
+<div id="map"></div>
+<div id="lat"></div>
+
+</body>
+</html>
+

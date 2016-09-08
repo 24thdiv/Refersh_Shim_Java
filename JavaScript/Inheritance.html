@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Inheritance</title>
+</head>
+
+<script type="text/javascript">
+
+function Parent(){
+	
+	this.address = "201 S 4th St.";
+	this.age = 45;
+	
+}
+
+function child(){
+	
+	this.age = 23;
+	
+}
+
+
+child.prototype = new Parent();
+var ch = new child();
+var par = new Parent();
+child.prototype.address = (ch.address);
+
+function parentprop(){
+	
+	
+	
+	document.getElementById("ans").innerHTML= "Parent's address is : "+par.address;
+	document.getElementById("age").innerHTML= "Parent's age is : "+par.age;
+	
+}
+
+
+
+function childprop(){
+	
+	
+	document.getElementById("ans").innerHTML= "Child's address is : "+ch.address;
+	document.getElementById("age").innerHTML= "Child's address is : "+ch.age;
+	
+}
+
+</script>
+
+<body>
+
+<H3>Inheritance</H3>
+
+<input type ="button" value="Click Here for Parent Properties" onclick="parentprop()"/>
+<input type ="button" value="Click Here for Child Properties" onclick="childprop()"/>
+
+<hr>
+<div id="ans"></div>
+<div id="age"></div>
+
+</body>
+</html>

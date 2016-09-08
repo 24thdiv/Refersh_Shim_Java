@@ -1,0 +1,73 @@
+
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>JSON</title>
+</head>
+
+<script type="text/javascript">
+
+function getdata(){
+	
+	var name = document.getElementById("name").value;
+	var address = document.getElementById("address").value;
+	var city = document.getElementById("city").value;
+	var phone = document.getElementById("phone").value;
+	var aphone = document.getElementById("aphone").value;
+	
+	var jsontext = '{"name":"'+name+'","address":"'+address+'","city":"'+city+'","phone":["'+phone+'","'+aphone+'"]}';   
+	var contact = JSON.parse(jsontext);
+
+	document.getElementById("n").innerHTML = "Name : "+contact.name;
+	document.getElementById("a").innerHTML = "Address : "+contact.address;
+	document.getElementById("c").innerHTML = "City : "+contact.city;
+	document.getElementById("p").innerHTML = "Phone : "+contact.phone[0];
+	document.getElementById("ap").innerHTML = "Alternative Phone : "+contact.phone[1];
+}
+
+
+
+</script>
+
+<body>
+<h3>JSON Data Example</h3>
+
+<table>
+		<tr>
+			<td>Name :</td>
+			<td><input type="text" id="name"/></td>
+			<!-- <td><span id="idSpan"></span></td> -->
+		</tr>
+		<tr>
+			<td>Address :</td>
+			<td><input type="text" id="address"/></td>
+			<!-- <td><span id="nameSpan"></span></td> -->
+		</tr>
+		<tr>
+		<td>City :</td>
+		<td><input type="text" name="city"  id="city" ></td>
+		</tr>
+		<tr>
+		<td>Phone No: :</td>
+		<td><input type="text" name="phone"  id="phone" ></td>
+		</tr>
+		<tr>
+		<td>Alternate Phone No: :</td>
+		<td><input type="text" name="aphone"  id="aphone" ></td>
+		</tr>
+		<tr>
+		<td><input type="button" name="submit" value="Get Data" id="submit" onclick="getdata()"></td>
+		</tr>
+	</table>
+
+<br>
+<br>
+<hr>
+<div id ="n"></div>
+<div id ="a"></div>
+<div id ="c"></div>
+<div id ="p"></div>
+<div id ="ap"></div>
+
+</body>
+</html>

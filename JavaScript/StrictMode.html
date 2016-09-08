@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Strict Mode</title>
+</head>
+<script type="text/javascript">
+
+var data;
+
+function strcitNo(){
+	
+	 name = document.getElementById('name1').value;
+	 data = "Without Strict Mode <br> Name : ";
+	 print(data,name);
+}
+
+function strict(){
+	"use strict";
+	 name1 = document.getElementById('name2').value;
+	  data = "With Strict Mode <br> Name : ";
+	  print(data,name1);
+}
+
+function print(data,name){
+	
+	document.getElementById('ans').innerHTML = data+name;
+	
+}
+
+</script>
+
+<body>
+
+<h4>Strict Mode Not Used</h4>
+Enter Name: <input type ="text" id= "name1"/>
+<input type="button" value="Check Name" onclick="strcitNo()" />
+<br>
+<br>
+<hr>
+
+<h4>Strict Mode Used</h4>
+Enter Name: <input type ="text" id= "name2"/>
+<input type="button" value="Check Name" onclick="strict()"/>
+<br>
+<br>
+<div id="ans"></div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Input Types</title>
+</head>
+<body>
+<form action="HtmlGeoLocation.html" autocomplete="on">
+First name : <input type="text" name="firstname" value ="Darshil" size="40"
+autofocus>
+<br>
+<br>
+Last name: <input type="text" name="lastname">
+<br>
+<br>Password : <input type="password" name="password" pattern="[A-Za-z0-9]{6}"
+title="A-Za-z0-9" required >
+<br>
+<br>
+Confirmed Password : <input type="password" name="password" required validate>
+<br>
+<br>
+Address :
+Line 1<input type="text" name="line1" required><br>
+<br>
+Line 2<input type="text" name="line2"><br>
+<br>
+City <input type="text" name="city" required><br>
+<br>
+State <input type="text" name="city" required><br>
+<br>
+Zip Code<input type="text" name="city" required>
+<br>
+<br>
+Mail:<input type="email" name="email" required>
+<br>
+<br>
+Gender: <input type="radio" name="Male" checked> Male <input type="radio"
+name="Female"> Female <input type="radio" name="other"> Other
+<br>
+<br>
+BirthDay:<input type="date" name="bday">
+<p><b>Note:</b> type="In internet explorer date is not supported"</p>
+<br>
+<br>
+<input type="submit" value="submit" >
+</form>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Conditions</title>
+</head>
+<script type="text/javascript">
+
+function calculate(){
+	var salary = document.getElementById('salary').value;
+	var sal = parseFloat(salary);
+	var total;
+	var tax;
+	if(sal<5000){
+		tax=4.8;
+		total = (sal*tax)/100 + sal;
+	}
+	else if(sal>=5000 && sal<10000){
+		tax=6.5;
+		total = (sal*tax)/100 + sal;
+    }
+	else if(sal>=10000 && sal<15000){
+		tax=7.9;
+		total = (sal*tax)/100 + sal;
+    }
+	else{
+		tax=9.2;
+		total = (sal*tax)/100 + sal;	
+	}
+	
+	document.getElementById('ans').innerHTML = "Tax : "+tax+"%<br>Total Payment: "+total ;
+	
+}
+
+
+</script>
+
+
+<body>
+
+<h3>Tax Evaluation System</h3>
+<hr>
+Enter Expenses: <input type = "text" name ="salary" id ="salary"/>
+
+<input type ="button" value="Calculate Tax" onclick="calculate()"/>
+
+<hr>
+<div id=ans></div>
+</body>
+</html>

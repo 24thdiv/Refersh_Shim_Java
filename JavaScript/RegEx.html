@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>RegEx</title>
+</head>
+
+<script type="text/javascript">
+
+function checkEmail() {
+
+	  var email = document.getElementById('email');
+	  var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+	  if (!filter.test(email.value)) {
+	    alert('Please provide a valid email address');
+	    email.focus;
+	    return false;
+	  }
+	  else{
+		  
+		  document.getElementById('ans').innerHTML = "Your Email Id has been Varified" ;
+		  
+	  }
+	}
+
+</script>
+
+<body>
+<h3>Email Validation</h3>
+
+ Email Id: <input type='text' id='email'/>
+ <input type='button' name='valid' value="Validate" onclick="checkEmail()"/>
+ <hr>
+ <div id="ans"></div>
+
+
+</body>
+</html>

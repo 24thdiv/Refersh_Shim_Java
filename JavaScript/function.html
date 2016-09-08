@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Function</title>
+</head>
+
+<script type="text/javascript">
+
+function convertFtoC() {
+    
+	var faren = document.getElementById('farn').value;
+    var ces = (parseFloat(faren) - 32) * (5 / 9);
+    var answer = ces.toFixed(2)+" Celsius";
+    document.getElementById('ans').innerHTML = answer ;
+    
+}
+
+function convertCtoF() {
+    
+	var ces = document.getElementById('ces').value;
+    var far = (parseFloat(ces) * (9 / 5)) + 32;
+    document.getElementById('ans').innerHTML = far.toFixed(2)+" Fahrenheit";
+    
+}
+
+
+</script>
+
+<body>
+
+	Enter Temparature in Fahrenheit: <input type="text" name="farn" id="farn"  />
+	<button type="button" onclick="convertFtoC()">Convert to Celsius</button>
+	<br>
+    <br>       
+	
+	Enter Temparature in Celsius: <input type="text" name="ces" id="ces"  />
+	<button type="button" onclick="convertCtoF()">Convert to Fahrenheit</button>
+	
+	<br>
+	<br>
+	
+	<div id = ans></div>
+
+</body>
+</html>

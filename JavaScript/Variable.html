@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Variable</title>
+</head>
+<script type="text/javascript">
+
+
+function add(){
+	
+	var one = document.getElementById("one").value;
+	var two = document.getElementById("two").value;
+	var ans = Number(one)+Number(two);
+	document.getElementById("answer").innerHTML="Sum is : " + ans;
+
+}
+
+function sub(){
+	
+	var one = document.getElementById("one").value;
+	var two = document.getElementById("two").value;
+	var ans = Number(one)-Number(two);
+	document.getElementById("answer").innerHTML="Subtraction is : " + ans;
+
+}
+
+function mul(){
+	
+	var one = document.getElementById("one").value;
+	var two = document.getElementById("two").value;
+	var ans = Number(one)*Number(two);
+	document.getElementById("answer").innerHTML="Multiplication is : " + ans;
+
+}
+
+function div(){
+	
+	var one = document.getElementById("one").value;
+	var two = document.getElementById("two").value;
+	var ans;
+	if(two==0){
+		ans =	"Numer Two cannot be zero";
+	}
+	else{
+		ans = Number(one)/Number(two);
+	}
+	
+	document.getElementById("answer").innerHTML="Sum is : " + ans;
+
+
+}
+
+
+
+</script>
+
+<body>
+	<table>
+		<tr>
+			<td>Number One :</td>
+			<td><input type="text" id="one"/></td>
+			<!-- <td><span id="idSpan"></span></td> -->
+		</tr>
+		<tr>
+			<td>Number two :</td>
+			<td><input type="text" id="two"/></td>
+			<!-- <td><span id="nameSpan"></span></td> -->
+		</tr>
+		<tr>
+		<td><input type="button" name="submit" value="Add" id="submit"
+												onclick="add()"></td>
+		</tr>
+		<tr>
+		<td><input type="button" name="submit" value="Subtract" id="submit"
+												onclick="sub()"></td>
+		</tr>
+		<tr>
+		<td><input type="button" name="submit" value="Multiply" id="submit"
+												onclick="mul()"></td>
+		</tr>
+		<tr>
+		<td><input type="button" name="submit" value="Divide" id="submit"
+												onclick="div()"></td>
+		</tr>
+	</table>
+	<hr>
+	<span id="answer"></span>
+	
+</body>
+</html>
+
